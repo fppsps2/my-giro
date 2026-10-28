@@ -1,0 +1,386 @@
+/* 1. Тут лежат глобальные настройки для всего сайта */
+:root {
+  --orange: #ffa019;
+  --orange-dark: #ed9a00;
+  --text: #303842;
+  --grey-bg: #fbfbfb;
+  --grey-text: #8191a6;
+  --container: 1140px;
+  --font: "Roboto", "Inter", "Segoe UI", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  background: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 2. Настройки для шапки сайта и верхнего меню */
+.header {
+  background: #fffefe;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone-text {
+  margin: 0;
+  font-size: 16px;
+}
+.btn-call {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav {
+  background: white;
+  padding: 20px 0;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+.menu a {
+  color: black;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 3. Стили для большого главного баннера */
+.banner {
+  background-image: url("../images/scooter-3620869_960_720 1.png");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  color: white;
+  text-align: center;
+}
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.banner h1 {
+  font-size: 64px;
+  margin: 0 0 20px 0;
+  font-weight: 200;
+}
+.banner p {
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.btn-catalog {
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 22px;
+  font-size: 16px;
+}
+
+/* 4. Обычные стили для секций контента на главной странице */
+h2 {
+  font-size: 36px;
+  margin: 50px 0 30px 0;
+  font-weight: 400;
+}
+
+.advantages-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.adv-item {
+  text-align: center;
+  width: 23%;
+}
+.adv-item img {
+  margin: 0 auto 15px auto;
+}
+.adv-item h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.features-columns {
+  display: flex;
+  justify-content: space-between;
+}
+.features-col {
+  width: 30%;
+}
+.features-col p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.features-summary {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.subscribe {
+  background: var(--orange);
+  color: white;
+  padding: 40px 0;
+  margin: 50px 0;
+}
+.subscribe-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.subscribe-form input {
+  background: var(--orange);
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 12px 20px;
+  color: white;
+  margin-right: 15px;
+}
+.subscribe-form input::placeholder {
+  color: white;
+}
+.subscribe-form button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 21px;
+  cursor: pointer;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog-tabs span {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #000;
+}
+.catalog-tabs span.active {
+  background: var(--orange);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.catalog-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.product-card {
+  background: #fefefe;
+  width: 23%;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.product-card .badge {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background: var(--orange);
+  color: white;
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 0 15px 15px 0;
+}
+.product-card img {
+  margin: 20px auto;
+}
+.product-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product-card .title {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  width: 31%; /* карточки делят место поровну */
+  background: #fff;
+}
+
+/* делаем все фотки одинаковыми по первой картинке */
+.member-card img {
+  width: 100%;
+  height: 440px; /* жесткая высота для всех картинок */
+  object-fit: cover; /* чтобы фотки не сжимались, а красиво подрезались */
+  margin-bottom: 15px;
+}
+
+.member-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.member-info p {
+  margin: 0 0 15px 0;
+  font-style: italic;
+  font-size: 14px;
+  color: #777;
+}
+
+.member-info button {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.brands {
+  background: var(--grey-bg);
+  padding: 40px 0;
+  margin-top: 50px;
+}
+.brands-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+.blogs-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-card {
+  width: 23%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+.blog-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.blog-card p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 5. Настройки стилей для самого низа страницы (футера) */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 15px;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+}
+.footer-left {
+  width: 40%;
+  color: var(--grey-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer-left .copy {
+  margin-top: 30px;
+}
+.footer-right {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-col h4 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: black;
+}
+.footer-col a {
+  display: block;
+  color: var(--grey-text);
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
